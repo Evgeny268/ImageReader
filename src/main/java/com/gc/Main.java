@@ -19,11 +19,12 @@ public class Main extends Application {
         primaryStage.setScene(screen);
         primaryStage.show();
 
+        RGBImageRender render = new RGBImageRender();
+        ImageEffects effects = new ImageEffects();
+
         RGBImageReader rgbImageReader = new RGBImageReader("D:/test/o.bmp");
         RGBImage image = rgbImageReader.readImage();
 
-        ImageEffects effects = new ImageEffects();
-        RGBImageRender render = new RGBImageRender();
         render.renderImage(image, canvas);
 
         RGBImage colores = new RGBImage(image);
@@ -35,7 +36,7 @@ public class Main extends Application {
         render.renderImage(noise, canvas,0,240);
 
         RGBImage denoise = new RGBImage(noise);
-        effects.denoiser(denoise,2);
+        effects.denoiser(denoise,1);
         render.renderImage(denoise,canvas,320,240);
     }
 
