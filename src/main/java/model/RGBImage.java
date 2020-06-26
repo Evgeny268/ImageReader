@@ -2,6 +2,7 @@ package model;
 
 /**
  * Цветное изображение, состоящее из пикселей
+ *
  * @see RGBPixel
  */
 public class RGBImage {
@@ -22,7 +23,8 @@ public class RGBImage {
 
     /**
      * Конструктор класса
-     * @param width - ширина изображения
+     *
+     * @param width  - ширина изображения
      * @param height - высота изобпажения
      */
     public RGBImage(int width, int height) {
@@ -36,7 +38,7 @@ public class RGBImage {
         }
     }
 
-    public RGBImage(RGBImage image){
+    public RGBImage(RGBImage image) {
         this.width = image.width;
         this.height = image.height;
         this.matrix = new RGBPixel[width][height];

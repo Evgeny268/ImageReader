@@ -2,7 +2,6 @@ package model;
 
 /**
  * Пиксель изображения
- *
  */
 public class RGBPixel {
     /**
@@ -28,9 +27,10 @@ public class RGBPixel {
 
     /**
      * Конструктор пикесля
-     * @param red - красная константа
+     *
+     * @param red   - красная константа
      * @param green - зеленя константа
-     * @param blue - синяя константа
+     * @param blue  - синяя константа
      */
     public RGBPixel(int red, int green, int blue) {
         this.red = red;
@@ -40,9 +40,10 @@ public class RGBPixel {
 
     /**
      * Консруктор копирования
+     *
      * @param pixel - образец пикселя
      */
-    public RGBPixel(RGBPixel pixel){
+    public RGBPixel(RGBPixel pixel) {
         this.red = pixel.red;
         this.green = pixel.green;
         this.blue = pixel.blue;
@@ -53,11 +54,11 @@ public class RGBPixel {
     }
 
     public void setRed(int red) {
-        if (red < 0){
+        if (red < 0) {
             this.red = 0;
-        }else if (red > 255){
+        } else if (red > 255) {
             this.red = 255;
-        }else {
+        } else {
             this.red = red;
         }
     }
@@ -67,11 +68,11 @@ public class RGBPixel {
     }
 
     public void setGreen(int green) {
-        if (green < 0){
+        if (green < 0) {
             this.green = 0;
-        }else if (green > 255){
+        } else if (green > 255) {
             this.green = 255;
-        }else {
+        } else {
             this.green = green;
         }
     }
@@ -81,11 +82,11 @@ public class RGBPixel {
     }
 
     public void setBlue(int blue) {
-        if (blue < 0){
+        if (blue < 0) {
             this.blue = 0;
-        }else if (blue > 255){
+        } else if (blue > 255) {
             this.blue = 255;
-        }else {
+        } else {
             this.blue = blue;
         }
     }
